@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import Provider from "./Provider";
 
 export const metadata: Metadata = {
   title: "LiveDocs",
@@ -35,7 +36,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             fontSans.variable
           )}
         >
-          {children}
+          {/* {children} */}
+          <Provider>{children}</Provider>
         </body>
       </html>
     </ClerkProvider>
